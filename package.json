@@ -1,0 +1,22 @@
+{
+  "name": "tool-failure",
+  "version": "1.0.0",
+  "description": "A purpose-built MCP server breaks its own tool five different ways, and 100 calls measure whether the model's answer says so.",
+  "license": "MIT",
+  "author": "Dmitry Semenkevich <dimhold@gmail.com>",
+  "type": "module",
+  "private": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "probe": "tsx run.ts",
+    "reclassify": "tsx reclassify.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
