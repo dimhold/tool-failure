@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "tool-failure"
+type: software
+authors:
+  - family-names: Semenkevich
+    given-names: Dmitriy
+    orcid: "https://orcid.org/0009-0009-3013-4978"
+version: "1.0.0"
+date-released: "2026-08-27"
+license: MIT
+repository-code: "https://github.com/dimhold/tool-failure"
+abstract: "When a tool fails loudly the answer says so 39 of 40. When it returns a corrupted value quietly, 0 of 40. An MCP server built to break its own tool."
+keywords:
+  - "LLM evaluation"
+  - "tool use in LLM agents"
+  - "silent failures"
+  - "MCP"
+  - "fault injection"
