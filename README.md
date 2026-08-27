@@ -11,7 +11,7 @@ Run date: 2026-08-14. Models: `claude-haiku-4-5`, `claude-opus-5`, through the C
 
 ## The question
 
-A model inside an agent is only as informed as its tools. Everyone knows what happens when a tool throws: the model tells you. Nobody had shown me what happens when a tool returns successfully with a value that is wrong.
+A model inside an agent is only as informed as its tools. Everyone knows what happens when a tool throws: the model tells you. I wanted a number for what happens when a tool returns successfully with a value that is wrong.
 
 So I built a tool I could break in specific ways, and asked for something only that tool could supply.
 
@@ -120,6 +120,33 @@ The companion probe [tool-honesty](https://gist.github.com/dimhold/b0dec44935026
 - **tool present and quietly wrong**: the model passes the bad value through
 
 The middle case is the one people build their intuition on, and it is the only one of the three that behaves.
+
+## Prior work
+
+Checked 2026-08-27. Not first with the question. The split is still ours to state.
+
+- [Tools Fail: Detecting Silent Errors in Faulty Tools](https://arxiv.org/abs/2406.19228)
+  (June 2024) is the closest work. It asks whether models detect "silent"
+  tool errors and probes it on a controlled calculator and an embodied
+  planner. It builds a framework and a recovery approach rather than
+  measuring how often the final answer discloses the failure.
+- [RoTBench](https://arxiv.org/abs/2401.08326) (January 2024) measures
+  robustness of tool learning under injected noise, aimed at tool selection
+  and parameter filling rather than at the value a tool returns.
+- [PredAct-Bench](https://arxiv.org/abs/2608.02372) (August 2026) benchmarks
+  dialogue agents paired with statistically imperfect tools.
+- Fault injection for MCP already exists as tooling, for example
+  [ajinb/mcp-chaos](https://github.com/ajinb/mcp-chaos) and
+  [tchardonnens/chaos-mcp](https://github.com/tchardonnens/chaos-mcp).
+  Those are infrastructure, not measurements.
+
+The concept "silent tool errors go undetected" is published, so an earlier
+sentence in this README claiming nobody had shown it was wrong and has been
+corrected. What we did not find stated anywhere is the number: disclosure at
+39 of 40 when the tool announces its own failure against 0 of 40 when it
+corrupts the value quietly, judged against the server's log rather than
+against anyone's reading of the reply. The finding stands inside a question
+others asked first.
 
 ## License
 
