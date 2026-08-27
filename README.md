@@ -113,7 +113,7 @@ Two models, one tool, 100 calls, one sitting. A comparison, not a benchmark. One
 
 ## Related
 
-The companion probe [tool-honesty](https://gist.github.com/dimhold/b0dec449350265812dd90ef2b0b0f6d9) removed the tools entirely and found the opposite failure: 0 of 40 replies mentioned the missing capability, and 34 of them wrote out a tool call that never happened. Put together:
+The companion probe [tool-honesty](https://github.com/dimhold/tool-honesty) removed the tools entirely and found the opposite failure: 0 of 40 replies mentioned the missing capability, and 34 of them wrote out a tool call that never happened. Put together:
 
 - **tool absent**: the model invents the call and often the answer
 - **tool present and loudly broken**: the model reports the breakage accurately
