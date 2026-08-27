@@ -3,6 +3,8 @@
 
 # tool-failure
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22128837.svg)](https://doi.org/10.5281/zenodo.22128837)
+
 **When a tool breaks loudly, the model's answer says so 39 times out of 40. When the same tool returns a corrupted value and stays quiet, the answer says so 0 times out of 40.**
 
 That is the whole finding. 100 calls, two models, one MCP server written for this study that breaks its own tool on demand and logs exactly what it handed back.
